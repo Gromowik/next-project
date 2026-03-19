@@ -1,0 +1,93 @@
+﻿Auflistung der Ordnerpfade
+Volumeseriennummer : 0CC2-38E3
+C:\XAMPP\HTDOCS\PROJECT_1_IN_VS\NEXT-LEARNING\SRC
++---app
+ª   ª   favicon.ico
+ª   ª   globals.css
+ª   ª   layout.tsx
+ª   ª   page.tsx
+ª   ª   
+ª   +---api
+ª       ª   .gitkeep
+ª       ª   route.ts
+ª       ª   
+ª       +---users
+ª           ª   route.ts
+ª           ª   
+ª           +---[id]
+ª                   route.ts
+ª                   
++---core
+ª   ª   index.ts
+ª   ª   
+ª   +---config
+ª   ª       app.config.ts
+ª   ª       
+ª   +---db
+ª   ª       index.ts
+ª   ª       
+ª   +---env
+ª           index.ts
+ª           
++---modules
+ª   +---auth
+ª   ª   ª   index.ts
+ª   ª   ª   
+ª   ª   +---api
+ª   ª   ª       auth.api.ts
+ª   ª   ª       
+ª   ª   +---components
+ª   ª   ª       LoginForm.tsx
+ª   ª   ª       SignupForm.tsx
+ª   ª   ª       
+ª   ª   +---model
+ª   ª   ª       types.ts
+ª   ª   ª       
+ª   ª   +---ui
+ª   +---dashboard
+ª   ª   ª   index.ts
+ª   ª   ª   
+ª   ª   +---api
+ª   ª   +---components
+ª   ª   ª       DashboardGrid.tsx
+ª   ª   ª       StatsCard.tsx
+ª   ª   ª       
+ª   ª   +---model
+ª   ª   ª       types.ts
+ª   ª   ª       
+ª   ª   +---ui
+ª   +---users
+ª       ª   index.ts
+ª       ª   
+ª       +---api
+ª       ª       users.api.ts
+ª       ª       
+ª       +---components
+ª       ª       UserCard.tsx
+ª       ª       UserList.tsx
+ª       ª       
+ª       +---model
+ª       ª       types.ts
+ª       ª       
+ª       +---ui
++---shared
+    +---hooks
+    ª       index.ts
+    ª       useDebounce.ts
+    ª       useLocalStorage.ts
+    ª       
+    +---lib
+    ª       api.ts
+    ª       cn.ts
+    ª       formatDate.ts
+    ª       index.ts
+    ª       
+    +---types
+    ª       index.ts
+    ª       
+    +---ui
+            Button.tsx
+            Card.tsx
+            index.ts
+            Input.tsx
+            
