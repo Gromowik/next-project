@@ -27,31 +27,33 @@ export function Navbar({ primaryActionLabel, onPrimaryAction }: NavbarProps) {
 
   return (
     <nav className="relative left-1/2 right-1/2 mb-8 w-screen -translate-x-1/2 border-y border-emerald-200/70 bg-linear-to-r from-[#effdf4] via-[#f8fffb] to-[#ecfff5] shadow-[0_10px_35px_rgba(16,185,129,0.10)] backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        <div className="min-w-0 shrink-0 rounded-2xl bg-linear-to-br from-emerald-700 via-emerald-800 to-teal-900 px-4 py-3 text-white shadow-lg">
-          <div className="text-xs font-semibold uppercase tracking-[0.24em] text-emerald-200">
-            Phenomenal Quiz
-          </div>
-          <div className="mt-1 text-sm text-emerald-50">Live host stream</div>
-        </div>
-
-        <div className="min-w-0 flex-1 overflow-hidden rounded-2xl border border-emerald-200/80 bg-white/85 px-3 py-3 shadow-inner shadow-emerald-100">
-          <div className="quiz-marquee-track gap-8 pr-8 text-sm font-semibold sm:text-base">
-            {[0, 1, 2].map((index) => (
-              <span key={index} aria-hidden={index > 0} className="quiz-marquee-item gap-3">
-                <span className="bg-linear-to-r from-[#059669] via-[#10b981] to-[#65a30d] bg-clip-text text-transparent">
-                  {marqueeParts[0]}
-                </span>
-                <span className="text-emerald-400">•</span>
-                <span className="bg-linear-to-r from-[#0f766e] via-[#14b8a6] to-[#22c55e] bg-clip-text text-transparent">
-                  {marqueeParts[1]}
-                </span>
+      {/* Бегущая строка — на всю ширину */}
+      <div className="overflow-hidden px-4 py-4">
+        <div className="quiz-marquee-track gap-8 pr-8 text-sm font-semibold sm:text-base">
+          {[0, 1, 2].map((index) => (
+            <span key={index} aria-hidden={index > 0} className="quiz-marquee-item gap-3">
+              <span className="bg-linear-to-r from-[#059669] via-[#10b981] to-[#65a30d] bg-clip-text text-transparent">
+                {marqueeParts[0]}
               </span>
-            ))}
-          </div>
+              <span className="text-emerald-400">•</span>
+              <span className="bg-linear-to-r from-[#0f766e] via-[#14b8a6] to-[#22c55e] bg-clip-text text-transparent">
+                {marqueeParts[1]}
+              </span>
+            </span>
+          ))}
         </div>
+      </div>
 
-        <div className="flex shrink-0 items-center gap-3">
+      {/* Брендовый блок — прижат к левому краю, ссылка на главную */}
+      <Link href="/" className="absolute left-4 top-1/2 -translate-y-1/2 min-w-0 shrink-0 rounded-2xl bg-linear-to-br from-emerald-700 via-emerald-800 to-teal-900 px-4 py-3 text-white shadow-lg transition hover:opacity-90">
+        <div className="text-xs font-semibold uppercase tracking-[0.24em] text-emerald-200">
+          Phenomenal Quiz
+        </div>
+        <div className="mt-1 text-sm text-emerald-50">Live host stream</div>
+      </Link>
+
+      {/* Кнопки — прижаты к правому краю */}
+      <div className="absolute right-4 top-1/2 -translate-y-1/2 flex shrink-0 items-center gap-3">
           {primaryActionLabel && onPrimaryAction && (
             <button
               type="button"
@@ -90,7 +92,6 @@ export function Navbar({ primaryActionLabel, onPrimaryAction }: NavbarProps) {
             </Link>
           )}
         </div>
-      </div>
     </nav>
   );
 }

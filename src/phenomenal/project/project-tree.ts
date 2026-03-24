@@ -1,82 +1,81 @@
 import type { MplusBeacon } from "@/phenomenal/types/mplus";
 
 /**
- * Navigationsbaum des Quiz — beschreibt die Projektstruktur von next-learning.
- * Jeder Knoten (Beacon) entspricht einem Ordner oder einer Datei im Projekt.
+ * Дерево проекта — те же beacon-узлы, что и M+, но описывают структуру программы.
+ * Каждый узел = раздел/файл проекта, к которому привязан вопрос.
  *
- * Ebenen:
- *   d=1 — Wurzel (das Projekt selbst)
- *   d=2 — Hauptschichten: app, core, phenomenal, modules, shared
- *   d=3 — Teilsysteme innerhalb einer Schicht
- *   d=4 — Konkrete Dateien (Blätter)
+ * Уровни:
+ *   1 — корень (сам проект)
+ *   2 — слои: app, core, phenomenal, modules, shared
+ *   3 — подсистемы внутри слоя
+ *   4 — конкретные файлы (листья)
  */
-export const mplusTree: MplusBeacon[] = [
-
-  // ── Ebene 1: Wurzel ──────────────────────────────────────────────────────
+export const projectTree: MplusBeacon[] = [
+  // ── Уровень 1: корень ─────────────────────────────────────────────────────
   {
-    id: "mplus-root",
+    id: "proj-root",
     distance: 1,
     questionId: "pq-root",
     parent: null,
     children: ["proj-app", "proj-core", "proj-phenomenal", "proj-modules", "proj-shared"],
     f: 0,
     importance: 1,
-    type: ["Mplus"],
+    type: ["Project"],
   },
 
-  // ── Ebene 2: Schichten ────────────────────────────────────────────────────
+  // ── Уровень 2: слои ───────────────────────────────────────────────────────
   {
     id: "proj-app",
     distance: 2,
     questionId: "pq-app",
-    parent: "mplus-root",
+    parent: "proj-root",
     children: ["proj-app-routing", "proj-app-actions", "proj-app-api"],
     f: 0,
     importance: 1,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-core",
     distance: 2,
     questionId: "pq-core",
-    parent: "mplus-root",
+    parent: "proj-root",
     children: ["proj-core-auth", "proj-core-db"],
     f: 0,
     importance: 1,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-phenomenal",
     distance: 2,
     questionId: "pq-phenomenal",
-    parent: "mplus-root",
+    parent: "proj-root",
     children: ["proj-engine", "proj-mplus", "proj-r"],
     f: 0,
     importance: 1,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-modules",
     distance: 2,
     questionId: "pq-modules",
-    parent: "mplus-root",
+    parent: "proj-root",
     children: ["proj-mod-auth", "proj-mod-dashboard"],
     f: 0,
     importance: 1,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-shared",
     distance: 2,
     questionId: "pq-shared",
-    parent: "mplus-root",
+    parent: "proj-root",
     children: ["proj-shared-ui", "proj-shared-lib"],
     f: 0,
     importance: 1,
-    type: ["Mplus"],
+    type: ["Project"],
   },
 
-  // ── Ebene 3: Teilsysteme ──────────────────────────────────────────────────
+  // ── Уровень 3: подсистемы ─────────────────────────────────────────────────
   {
     id: "proj-app-routing",
     distance: 3,
@@ -85,7 +84,7 @@ export const mplusTree: MplusBeacon[] = [
     children: ["proj-app-page", "proj-app-layout"],
     f: 0,
     importance: 1,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-app-actions",
@@ -95,7 +94,7 @@ export const mplusTree: MplusBeacon[] = [
     children: ["proj-save-flow-action"],
     f: 0,
     importance: 2,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-app-api",
@@ -105,7 +104,7 @@ export const mplusTree: MplusBeacon[] = [
     children: ["proj-api-auth", "proj-api-flows"],
     f: 0,
     importance: 1,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-core-auth",
@@ -115,7 +114,7 @@ export const mplusTree: MplusBeacon[] = [
     children: ["proj-session", "proj-password", "proj-guards"],
     f: 0,
     importance: 2,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-core-db",
@@ -125,7 +124,7 @@ export const mplusTree: MplusBeacon[] = [
     children: ["proj-schema", "proj-flows-db"],
     f: 0,
     importance: 2,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-engine",
@@ -135,7 +134,7 @@ export const mplusTree: MplusBeacon[] = [
     children: ["proj-engine-start", "proj-engine-answer", "proj-engine-next"],
     f: 0,
     importance: 2,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-mplus",
@@ -145,7 +144,7 @@ export const mplusTree: MplusBeacon[] = [
     children: ["proj-mplus-tree", "proj-select-next"],
     f: 0,
     importance: 2,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-r",
@@ -155,7 +154,7 @@ export const mplusTree: MplusBeacon[] = [
     children: ["proj-questions"],
     f: 0,
     importance: 1,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-mod-auth",
@@ -165,7 +164,7 @@ export const mplusTree: MplusBeacon[] = [
     children: ["proj-auth-api", "proj-login-form"],
     f: 0,
     importance: 1,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-mod-dashboard",
@@ -175,7 +174,7 @@ export const mplusTree: MplusBeacon[] = [
     children: ["proj-stats-card"],
     f: 0,
     importance: 1,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-shared-ui",
@@ -185,7 +184,7 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 1,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-shared-lib",
@@ -195,10 +194,10 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 1,
-    type: ["Mplus"],
+    type: ["Project"],
   },
 
-  // ── Ebene 4: Konkrete Dateien (Blätter) ───────────────────────────────────
+  // ── Уровень 4: конкретные файлы (листья) ─────────────────────────────────
   {
     id: "proj-app-page",
     distance: 4,
@@ -207,7 +206,7 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 1,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-app-layout",
@@ -217,7 +216,7 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 1,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-save-flow-action",
@@ -227,7 +226,7 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 3,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-api-auth",
@@ -237,7 +236,7 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 2,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-api-flows",
@@ -247,7 +246,7 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 1,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-session",
@@ -257,7 +256,7 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 3,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-password",
@@ -267,7 +266,7 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 2,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-guards",
@@ -277,7 +276,7 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 2,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-schema",
@@ -287,7 +286,7 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 2,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-flows-db",
@@ -297,7 +296,7 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 3,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-engine-start",
@@ -307,7 +306,7 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 2,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-engine-answer",
@@ -317,7 +316,7 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 3,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-engine-next",
@@ -327,7 +326,7 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 3,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-mplus-tree",
@@ -337,7 +336,7 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 2,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-select-next",
@@ -347,7 +346,7 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 2,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-questions",
@@ -357,7 +356,7 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 1,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-auth-api",
@@ -367,7 +366,7 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 2,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-login-form",
@@ -377,7 +376,7 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 1,
-    type: ["Mplus"],
+    type: ["Project"],
   },
   {
     id: "proj-stats-card",
@@ -387,14 +386,14 @@ export const mplusTree: MplusBeacon[] = [
     children: [],
     f: 0,
     importance: 1,
-    type: ["Mplus"],
+    type: ["Project"],
   },
 ];
 
-export function findBeaconById(id: string) {
-  return mplusTree.find((b) => b.id === id) ?? null;
+export function findProjectBeaconById(id: string): MplusBeacon | null {
+  return projectTree.find((b) => b.id === id) ?? null;
 }
 
-export function findBeaconByQuestionId(questionId: string) {
-  return mplusTree.find((b) => b.questionId === questionId) ?? null;
+export function findProjectBeaconByQuestionId(questionId: string): MplusBeacon | null {
+  return projectTree.find((b) => b.questionId === questionId) ?? null;
 }

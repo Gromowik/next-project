@@ -41,8 +41,12 @@ export function StartScreen({ topBeacons, topFlows, topQuestions }: StartScreenP
             Dieses Quiz arbeitet mit einem Baum von Beacons und nicht mit einer flachen Sammlung isolierter Fragen.
             Jeder Durchlauf ist ein Schnitt durch die Struktur des Verstehens: vom oberen Aufruf bis zum unteren Ergebnis.
           </p>
-          <p className="text-sm text-slate-500">
+          <p className="text-gray-700">
             Vor dem Start siehst du die aktuell wichtigsten Vertreter der Schichten. Während des Quiz entsteht der Fluss als Karten-Spalte von oben nach unten.
+          </p>
+          <p className="text-gray-700">
+            Um zu starten, klicke oben rechts auf <strong>„Quiz starten"</strong>. Wähle eine Antwort pro Karte — der nächste Schritt erscheint automatisch darunter.
+            Am Ende des Flusses kannst du auf <strong>„Quizfluss beenden"</strong> klicken. Danach erscheint ein Zusammenfassungs-Container mit der Statistik des Durchlaufs: Anzahl der Schritte, Score und Gesamtwichtigkeit.
           </p>
         </div>
       </div>

@@ -1,10 +1,10 @@
 import type { QuizHost } from "@/phenomenal/types/host";
 
 export const quizHost: QuizHost = {
-  id: "quiz-de-1",
+  id: "quiz-projekt-1",
   O: {
-    name: "JavaScript Grundlagen Quiz",
-    description: "Ein Lernquiz über Variablen, Funktionen, DOM und asynchrones JavaScript.",
+    name: "Projekt-Struktur Quiz",
+    description: "Lerne die Architektur dieses Next.js-Projekts kennen — durch das Quiz der eigenen Programmstruktur. M+-Baum, Engine, Authentifizierung, Datenbank und Server Actions.",
     image: "/quiz-cover.png",
   },
   type: ["phenomenal", "host"],
