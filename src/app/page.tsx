@@ -33,6 +33,15 @@ export default function Home() {
             <Link href="/passage">
               <Button size="lg" variant="secondary">Passage lesen</Button>
             </Link>
+            <Link href="/philosophy">
+              <Button size="lg" variant="secondary">Philosophie</Button>
+            </Link>
+            <Link href="/terms">
+              <Button size="lg" variant="secondary">Terminologie</Button>
+            </Link>
+            <Link href="/guide">
+              <Button size="lg" variant="secondary">Anleitung</Button>
+            </Link>
           </div>
         </section>
 

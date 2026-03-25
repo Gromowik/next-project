@@ -40,6 +40,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Markdown — игнорировать все .md кроме README.md
+# Markdown — игнорировать все .md кроме README.md и Converter_GTC.md
 *.md
 !README.md
+!Converter_GTC.md
+
+# Archiv — nicht committen
+public/archiv/

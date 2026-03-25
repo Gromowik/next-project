@@ -4,6 +4,8 @@ Lernprojekt auf Basis von **Next.js 16** mit App Router, modularer Architektur u
 
 **Ziel:** Eine phänomenale Wissensstruktur aufbauen und testen:
 
+> **GTC-Dokumentation:** Empfehlungen zur Aufbau des General Tree of Connections → [`Converter_GTC.md`](./Converter_GTC.md)
+
 | Symbol | Bedeutung |
 |--------|-----------|
 | `M+` | Beacons — Baumknoten, die den Navigationspfad durch Fragen steuern |
