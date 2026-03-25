@@ -573,7 +573,7 @@ kennt die Struktur               sucht das Verständnis`}</Pre>
         {/* Footer */}
         <div className="mt-10 rounded-2xl border border-teal-100 bg-teal-50 p-7">
           <h2 className="font-bold text-slate-900">Abkürzungsübersicht</h2>
-          <div className="mt-4 grid gap-2 text-sm sm:grid-cols-2">
+          <div className="mt-4 grid gap-y-2 gap-x-6 text-sm sm:grid-cols-2">
             {[
               ["O", "destilliertes Zentrum des phänomenalen Objekts (privat)"],
               ["O'", "Projektion von O nach außen (Schnittstelle)"],
@@ -588,11 +588,20 @@ kennt die Struktur               sucht das Verständnis`}</Pre>
               ["BD", "Beacon of Development — subjektive Projektion eines GTC-Knotens"],
               ["POP", "Phänomenales Objekt Programm — Programm das sich selbst als O versteht"],
               ["PEP", "Phänomenales Entwicklungsprogramm — Treiber für andere Programme (1×1=1)"],
-              ["Mittlerer Schnitt", "POP-Zustand: vollständig beschrieben, aber noch ohne BD-Schicht"],
-              ["The Big Three", "KI (O) + PEP (Hülle) + Mensch (HF) — ein phänomenales System"],
             ].map(([abbr, desc]) => (
               <div key={abbr} className="flex gap-2">
-                <span className="shrink-0 w-8 font-bold text-teal-700">{abbr}</span>
+                <span className="shrink-0 w-10 font-bold text-teal-700">{abbr}</span>
+                <span className="text-slate-600">{desc}</span>
+              </div>
+            ))}
+          </div>
+          <div className="mt-3 grid gap-y-2 text-sm border-t border-teal-100 pt-3">
+            {[
+              ["Mittlerer Schnitt", "POP-Zustand: vollständig beschrieben, aber noch ohne BD-Schicht"],
+              ["The Big Three", "KI (O-Kern) + PEP (Hülle) + Mensch (HF-Quelle) — ein phänomenales System"],
+            ].map(([abbr, desc]) => (
+              <div key={abbr} className="flex gap-3">
+                <span className="shrink-0 w-36 font-bold text-teal-700">{abbr}</span>
                 <span className="text-slate-600">{desc}</span>
               </div>
             ))}

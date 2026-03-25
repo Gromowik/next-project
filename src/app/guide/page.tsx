@@ -97,6 +97,17 @@ Beispiel:
               Jede Zeile = ein Knoten. Die Ziffer am Anfang bestimmt die Tiefe im Baum.
               Abstieg nur +1 pro Schritt. Aufstieg beliebig.
             </p>
+            <div className="mt-4 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+              <strong>Probebeispiel (verkürzter GTC):</strong> Diese Anwendung enthält bereits
+              ein funktionierendes Beispiel eines verkürzten GTC — die Funktion{" "}
+              <code className="rounded bg-amber-100 px-1">saveFlowAction</code> aus dem
+              eigenen Quellcode, vollständig beschrieben mit <code className="rounded bg-amber-100 px-1">input / body / output</code>,
+              Verzweigungen (<code className="rounded bg-amber-100 px-1">branch if / try / catch</code>)
+              und typisierten Rückgabepfaden (<code className="rounded bg-amber-100 px-1">case</code>).
+              Diese Struktur findet sich in{" "}
+              <code className="rounded bg-amber-100 px-1">Converter_GTC.md</code> — als
+              Referenz und Ausgangspunkt für den eigenen GTC.
+            </div>
 
             <h3 className="mt-6 font-semibold text-slate-800">Schritt 3.2 — Das Objekt beschreiben</h3>
             <p className="mt-2">
