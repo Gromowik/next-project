@@ -81,7 +81,7 @@ next-learning/
 
 ```bash
 git clone https://github.com/Gromowik/next-project.git
-cd next-project/next-learning
+cd next-project
 npm install
 npm run dev       # → http://localhost:3000
 ```

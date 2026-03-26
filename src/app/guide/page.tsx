@@ -42,7 +42,7 @@ export default function GuidePage() {
               Eingabeaufforderung) folgenden Befehl ausführen:
             </p>
             <Pre>{`git clone https://github.com/Gromowik/next-project.git
-cd next-project/next-learning`}</Pre>
+cd next-project`}</Pre>
           </Section>
 
           {/* ── SCHRITT 2: Installation ── */}
